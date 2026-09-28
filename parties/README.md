@@ -13,7 +13,7 @@ Read your assigned group's file first — everything you need to start is in tha
 | Tue 29 Sept PM | VM Launchpad | Joe MacLennan | `party-guest-4` | [tue-pm-vmo.md](tue-pm-vmo.md) |
 | Wed 30 Sept AM | VM Launchpad | Joseph Valeriano (JV) | `party-guest-3` | [wed-am-vmo.md](wed-am-vmo.md) |
 
-All accounts share password `Spectro123!!`. Host accounts (`party-host-1..3`) are collaborators on every range and are handed out at kickoff for the PMs / eng leads who need cross-station access.
+All accounts share password `Spectro123!!`. Host accounts (`party-host-1..3`) are collaborators on every range — see [hosts.md](hosts.md).
 
 ## Rules for the party
 
