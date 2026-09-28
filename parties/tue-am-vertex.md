@@ -3,6 +3,8 @@
 Installer: Barbara Iheme
 Slot: Tue 29 Sept, 9:00 to 12:00 PT
 
+**How to work through this:** the [trainee guide](../README.md) walks the flow end to end (sign in, BMC console, SSH bastion, node hop, overlay UIs). This file is only your launch board — everything below is what makes _your_ range different from the walkthrough.
+
 ## Sign in
 
 - URL: <https://factory.fedlab.xyz/> — **Sign in with SSO**

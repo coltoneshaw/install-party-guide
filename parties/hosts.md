@@ -2,6 +2,8 @@
 
 Three shared accounts for the PMs and eng leads who need cross-station access during the party. Each is a collaborator on every range (dry-run, vertex-tue-am, vmo-tue-am, vmo-tue-pm, vmo-wed-am).
 
+**How to work through this:** the [trainee guide](../README.md) walks the flow end to end (sign in, BMC console, SSH bastion, node hop, overlay UIs). Same mechanics as a guest, just with cross-range access.
+
 ## Sign in
 
 - URL: <https://factory.fedlab.xyz/> — **Sign in with SSO**

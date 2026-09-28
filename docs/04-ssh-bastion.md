@@ -14,14 +14,16 @@ Once the key is stored, a **Get certificate** button appears in that same sectio
 
 ## Mint a certificate and set up the aliases
 
-Still on the Access tab, click **Get certificate** under Bastion SSH.
+Still on the Access tab, click **Get certificate** under Bastion SSH. The section expands inline (no popup) with the valid-for line and two copy buttons.
 
-![The Get certificate dialog. Valid for 168 hours (7 days). Click again when it runs out.](../images/tt-07-cert.jpg)
+![The Get certificate result — valid 168 hours (7 days), Copy certificate and Copy ssh config buttons, and the config block previewed below.](../images/tt-07-cert.jpg)
 
-The dialog gives you two things:
+It gives you two things to move onto your laptop:
 
-- A **certificate blob** — save it to `~/.ssh/<range-name>-cert.pub`.
-- An **ssh config block** — append it to `~/.ssh/config`, then add three more `Host` blocks for the nodes (fill in your range name and IDX from your party file).
+- **Copy certificate** — paste those bytes into `~/.ssh/<range-name>-cert.pub`.
+- **Copy ssh config** (also previewed inline in a code block) — append it to `~/.ssh/config`, then add three more `Host` blocks for the nodes (fill in your range name and IDX from your party file).
+
+Certificates are valid 168 hours (7 days). Click **Get certificate** again when it runs out — that mints a new one and is the fix for every "used to work" refusal.
 
 ```
 Host vertex-tue-am
@@ -58,8 +60,6 @@ Welcome to Ubuntu 22.04.4 LTS (GNU/Linux 5.15.0-100-generic x86_64)
 Last login: Mon Sep 28 04:15:22 2026 from 10.7.8.9
 pubsec@vertex-tue-am:~$
 ```
-
-If it refuses your key: the certificate lives 168 hours. On the range page, **Get certificate** again — that mints a new one and is the fix for every "used to work" refusal.
 
 ## What lives on the bastion
 
