@@ -15,12 +15,14 @@ Your assigned file in [`parties/`](parties/) is the launch board: sign-in URL, u
 
 If you get stuck on the mechanics (how to mint an ssh cert, how to open the overlay UIs, why the bastion refuses your key), [`docs/`](docs/) is the general walkthrough.
 
+**One heads-up on the factoryd home page:** the "Ranges" table only shows ranges you own. Your collaborated range will look missing — that is expected. Use the **Range page** link in your group's file to reach yours directly.
+
 ## Contents
 
 1. [Prerequisites: VPN, browser, terminal](docs/01-prereqs.md)
-2. [First sign-in: SSO and your SSH key](docs/02-sign-in.md)
+2. [First sign-in: SSO](docs/02-sign-in.md)
 3. [The BMC page: what you're looking at](docs/03-bmc-page.md)
-4. [SSH to the bastion](docs/04-ssh-bastion.md)
+4. [SSH to the bastion (store your key, mint your cert)](docs/04-ssh-bastion.md)
 5. [Hop to an appliance node](docs/05-node-hop.md)
 6. [Opening overlay UIs from your laptop](docs/06-overlay-uis.md)
 7. [When something breaks](docs/07-when-stuck.md)

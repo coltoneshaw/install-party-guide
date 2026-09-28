@@ -2,9 +2,19 @@
 
 The bastion is the only way into the range. Your laptop reaches the bastion. The bastion reaches every node on the range. Nodes refuse your laptop key directly — that is intentional, not a broken permission.
 
+## Store your public key first
+
+On the range page (drop `/bmc` from your BMC URL), open the **Access** tab. Under **Bastion SSH** you'll see a text box captioned `ssh-ed25519 AAAA… you@laptop`. Paste the entire contents of `~/.ssh/id_ed25519.pub` into it and click **Store public key**. This is one line and looks like:
+
+```
+ssh-ed25519 AAAAC3Nz…rest…of…the…key you@yourlaptop
+```
+
+Once the key is stored, a **Get certificate** button appears in that same section. This key-then-cert order is per-range — do it once for each range you're a collaborator on.
+
 ## Mint a certificate and set up the aliases
 
-On the range page (drop `/bmc` from your BMC URL), click **Get certificate** under Bastion SSH. Your public key is already stored (from step 2), so there is nothing to paste.
+Still on the Access tab, click **Get certificate** under Bastion SSH.
 
 ![The Get certificate dialog. Valid for 168 hours (7 days). Click again when it runs out.](../images/tt-07-cert.jpg)
 

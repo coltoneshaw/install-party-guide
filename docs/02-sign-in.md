@@ -9,16 +9,12 @@ Open <https://factory.fedlab.xyz/>. Click **Sign in with SSO**.
 - Username: the `party-guest-N` or `party-host-N` in your group's file
 - Password: `Spectro123!!`
 
-## Upload your public SSH key
+## First-login profile prompt
 
-Click your username (top right) → **SSH key**. Paste the entire contents of `~/.ssh/id_ed25519.pub` into the box. Save.
-
-The public key looks like one line:
-
-```
-ssh-ed25519 AAAAC3Nz…rest…of…the…key you@yourlaptop
-```
+On your first sign-in Keycloak asks you to complete an **Update Account Information** page: email, first name, last name. Fill it in with your real details and submit. You only see this once.
 
 ## What's next
 
-Now open your assigned BMC page — the URL is in your group's file — in the same browser tab. The next section explains what you're looking at.
+Factoryd hands you a home page with a "Ranges" table on it. That table only shows ranges you own — your collaborated range will look missing, that is expected. Open the **Range page** link from your group's file (in [`parties/`](../parties/)) to reach yours directly.
+
+The SSH key upload lives on the range's Access tab, not the profile menu — [docs/04-ssh-bastion.md](04-ssh-bastion.md) walks you through it once you're on your range page.
