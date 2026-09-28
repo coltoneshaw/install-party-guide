@@ -8,7 +8,7 @@ This page is bastion mechanics for the party. **What to do next with the bundle*
 
 - SSH to the bastion working ([docs/04-ssh-bastion.md](04-ssh-bastion.md) done).
 - The appliance's node-1 is installed and reachable at `10.240.<IDX>.10` (you finished the vendor TUI + local-UI first-boot).
-- Your Artifact Studio download link for the bundle. Bundle names by product:
+- An Artifact Studio account and the direct download URL for the bundle you need. Bundle names by product (find them in Artifact Studio):
   - VerteX 4.10.17: `palette-vertex-appliance-4.10.17.tar.zst` (~12 GB)
   - VM Launchpad 4.10.13: `launchpad-for-vms-4.10.13.tar.zst` (~14 GB)
 
@@ -37,15 +37,15 @@ Palette CLI Version: 4.10.0
 
 ## 2. Put the bundle on the bastion
 
-Fetch it straight from Artifact Studio (the bastion has lab-network egress, and Artifact Studio is reachable):
+Fetch it straight from Artifact Studio (the bastion has lab-network egress, and Artifact Studio is reachable). Don't hand-build the URL — the path segments (FIPS vs non-FIPS, product code, sub-directory) vary per artifact and change over time. Open Artifact Studio in a browser, find the bundle by name, and copy its direct download URL, then run on the bastion:
 
 ```
-curl -fL -o palette-vertex-appliance-4.10.17.tar.zst \
-  'https://software-private.spectrocloud.com/artifact-studio/zst/palette/4.10/4.10.17/palette-vertex-appliance-4.10.17.tar.zst' \
+curl -fL -o <bundle-filename>.tar.zst \
+  '<paste URL from Artifact Studio>' \
   -u "$ARTIFACT_USER:$ARTIFACT_PW"
 ```
 
-`$ARTIFACT_USER` and `$ARTIFACT_PW` come from `~/range/secrets.env` on the bastion — `source` it once at the start of your session. On success:
+Set `$ARTIFACT_USER` and `$ARTIFACT_PW` to your own Artifact Studio credentials — `export` them once at the start of the session so the password stays out of shell history. On success:
 
 ```
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
