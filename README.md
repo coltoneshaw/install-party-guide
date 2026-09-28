@@ -26,6 +26,7 @@ If you get stuck on the mechanics (how to mint an ssh cert, how to open the over
 5. [Hop to an appliance node](docs/05-node-hop.md)
 6. [Opening overlay UIs from your laptop](docs/06-overlay-uis.md)
 7. [When something breaks](docs/07-when-stuck.md)
+8. [Load the content bundle from the bastion](docs/08-content-bundle.md)
 
 ## Rules for the party
 
