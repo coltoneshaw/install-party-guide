@@ -8,6 +8,12 @@ The bundle is 12 to 14 GB. Don't upload it from your laptop through the applianc
 ssh <range-name>
 ```
 
+For a range called `vertex-tue-am`:
+
+```
+ssh vertex-tue-am
+```
+
 Setup (SSH config, cert): [docs/04-ssh-bastion.md](04-ssh-bastion.md).
 
 ## SSH to the appliance nodes (via the bastion)
@@ -16,6 +22,12 @@ Setup (SSH config, cert): [docs/04-ssh-bastion.md](04-ssh-bastion.md).
 ssh <range-name>-n1
 ssh <range-name>-n2
 ssh <range-name>-n3
+```
+
+Same range, node-1:
+
+```
+ssh vertex-tue-am-n1
 ```
 
 ## Artifact Studio
