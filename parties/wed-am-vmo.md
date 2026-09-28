@@ -6,7 +6,7 @@ Slot: Wed 30 Sept, 9:00 to 12:00 PT
 ## Sign in
 
 - URL: <https://factory.fedlab.xyz/> — **Sign in with SSO**
-- Username: `party-guest-1`
+- Username: `party-guest-3`
 - Password: `Spectro123!!`
 
 ## Your range
