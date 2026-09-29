@@ -10,6 +10,7 @@ Read your assigned group's file first — everything you need to start is in tha
 | --- | --- | --- | --- | --- |
 | Mon 28 Sept PM | Dry run (VerteX shape) | Bill DeCoste | `party-guest-1` | [mon-dry-run.md](mon-dry-run.md) |
 | Tue 29 Sept AM | VerteX mgmt appliance | Barbara Iheme | `party-guest-2` | [tue-am-vertex.md](tue-am-vertex.md) |
+| Tue 29 Sept AM | VerteX mgmt appliance | Barbara Iheme | `party-guest-5` | [tue-am-vertex-2.md](tue-am-vertex-2.md) |
 | Tue 29 Sept PM | VM Launchpad | Joe MacLennan | `party-guest-4` | [tue-pm-vmo.md](tue-pm-vmo.md) |
 | Wed 30 Sept AM | VM Launchpad | Joseph Valeriano (JV) | `party-guest-3` | [wed-am-vmo.md](wed-am-vmo.md) |
 
@@ -30,6 +31,6 @@ If the factoryd sign-in page is down, or a range is unreachable and you've alrea
 
 Accounts, keypairs, and ranges are single-use. On or after 2 Oct 2026:
 
-- The 8 `party-*` Keycloak accounts get deleted.
-- The 5 factoryd ranges get destroyed.
+- The 9 `party-*` Keycloak accounts get deleted.
+- The 6 factoryd ranges get destroyed.
 - Delete any range-specific certs from your `~/.ssh/`.
