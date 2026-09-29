@@ -23,10 +23,12 @@ haproxy on the bastion is pre-configured for these exact IPs. Assign anything el
 
 | node hostname | IP |
 | --- | --- |
-| palette-vertex-1 | 10.240.7.10 |
-| palette-vertex-2 | 10.240.7.11 |
-| palette-vertex-3 | 10.240.7.12 |
+| palette-vertex-1 | 10.240.10.10 |
+| palette-vertex-2 | 10.240.10.11 |
+| palette-vertex-3 | 10.240.10.12 |
 
 - Subnet mask: `255.255.255.0`
-- Gateway and DNS: `10.240.7.1`
-- Cluster VIP (assign during cluster create, not per node): `10.240.7.5`
+- Gateway and DNS: `10.240.10.1`
+- Cluster VIP (assign during cluster create, not per node): `10.240.10.5`
+
+> Subnet 10 is a placeholder pending range creation — factoryd assigns the actual subnet from the range's index. If the range is provisioned at a different index, update these IPs to match what factoryd emits on the range page.
