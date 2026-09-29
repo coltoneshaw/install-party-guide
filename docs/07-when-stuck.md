@@ -22,4 +22,5 @@ Two rules first:
 | `ssh <range>-nN` refuses your password | node admin account locked after 3 wrong tries in 15 min (DISA STIG) | check the password via the node's Local UI (Local UI is unaffected by the SSH lockout); if it stays refused, Reset the node from the BMC page |
 | `ssh <range>-nN` gives `Connection refused` from a node that used to answer | bastion banned by the node after 5 password failures | wait 10 minutes |
 | A login that worked yesterday fails today | the range was rebuilt overnight | tell your host — the accounts, IPs and certs are all new |
+| **Sign in with SSO** button gives "load failed" (or the browser can't reach `sso.lab.fedlab.xyz`) | the lab-DNS resolver isn't set up on your laptop, so `sso.lab.fedlab.xyz` doesn't resolve even though `factory.fedlab.xyz` does | run the macOS/Linux/Windows commands in [docs/01-prereqs.md](01-prereqs.md#dns-for-fedlabxyz), then flush DNS and refresh the browser |
 

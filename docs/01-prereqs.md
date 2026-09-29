@@ -27,13 +27,15 @@ Once the VPN is up, names ending in `.fedlab.xyz` (the factory, the sign-in page
 
 ### macOS
 
-Create a resolver file. macOS reads any file under `/etc/resolver/` named after a domain and sends queries for that domain to the listed nameserver.
+Create a resolver file. macOS reads any file under `/etc/resolver/` named after a domain and sends queries for that domain to the listed nameserver. `/etc/resolver/` doesn't exist by default — create it first, then drop the file, then flush the cache so the new resolver takes effect immediately:
 
 ```
-sudo tee /etc/resolver/fedlab.xyz <<< 'nameserver 10.10.186.100'
+sudo mkdir -p /etc/resolver
+echo 'nameserver 10.10.186.100' | sudo tee /etc/resolver/fedlab.xyz
+sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
 ```
 
-Verify:
+Verify the resolver is registered:
 
 ```
 scutil --dns | grep -A 3 fedlab
@@ -46,6 +48,19 @@ Successful:
   nameserver[0] : 10.10.186.100
   flags    : Request A records
   reach    : 0x00000002 (Reachable)
+```
+
+And that it actually resolves lab names:
+
+```
+dscacheutil -q host -a name sso.lab.fedlab.xyz
+```
+
+Successful:
+
+```
+name: sso.lab.fedlab.xyz
+ip_address: 10.10.186.100
 ```
 
 ### Linux
