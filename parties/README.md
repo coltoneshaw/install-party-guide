@@ -9,9 +9,9 @@ Read your assigned group's file first — everything you need to start is in tha
 | slot | product | installer | account | file |
 | --- | --- | --- | --- | --- |
 | Mon 28 Sept PM | Dry run (VerteX shape) | Bill DeCoste | `party-guest-1` | [mon-dry-run.md](mon-dry-run.md) |
-| Tue 29 Sept AM | VerteX mgmt appliance | Barbara Iheme | `party-guest-2` | [tue-am-vertex.md](tue-am-vertex.md) |
+| Tue 29 Sept AM | VerteX mgmt appliance | Joe MacLennan | `party-guest-2` | [tue-am-vertex.md](tue-am-vertex.md) |
 | Tue 29 Sept AM | VerteX mgmt appliance | Barbara Iheme | `party-guest-5` | [tue-am-vertex-2.md](tue-am-vertex-2.md) |
-| Tue 29 Sept PM | VM Launchpad | Joe MacLennan | `party-guest-4` | [tue-pm-vmo.md](tue-pm-vmo.md) |
+| Tue 29 Sept PM | VM Launchpad | Jacob Helton | `party-guest-4` | [tue-pm-vmo.md](tue-pm-vmo.md) |
 | Wed 30 Sept AM | VM Launchpad | Joseph Valeriano (JV) | `party-guest-3` | [wed-am-vmo.md](wed-am-vmo.md) |
 
 All accounts share password `Spectro123!!`. Host accounts (`party-host-1..3`) are collaborators on every range — see [hosts.md](hosts.md).

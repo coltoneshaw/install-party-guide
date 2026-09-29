@@ -1,6 +1,6 @@
 # Tuesday PM — VM Launchpad
 
-Installer: Joe MacLennan
+Installer: Jacob Helton
 Slot: Tue 29 Sept, 12:00 to 15:00 PT
 
 **How to work through this:** the [trainee guide](../README.md) walks the flow end to end (sign in, BMC console, SSH bastion, node hop, overlay UIs). This file is only your launch board — everything below is what makes _your_ range different from the walkthrough.
