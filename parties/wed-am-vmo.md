@@ -30,3 +30,16 @@ haproxy on the bastion is pre-configured for these exact IPs. Assign anything el
 - Subnet mask: `255.255.255.0`
 - Gateway and DNS: `10.240.9.1`
 - Cluster VIP (assign during cluster create, not per node): `10.240.9.5`
+
+## NICs and bonding
+
+Each node has four virtio NICs, all on the same range network (VXLAN overlay, MTU 1450). Build the production shape: two bonds of two.
+
+| NICs (by Proxmox slot) | bond | carries |
+| --- | --- | --- |
+| net0 + net2 | management bond | node IP from the table above, Kubernetes cluster traffic |
+| net1 + net3 | VM data bond | tenant VM traffic (the `br0` bridge), no address on the node |
+
+- The node IP, mask, gateway and DNS above go on the **management bond**, not on a single NIC. haproxy still expects those exact IPs.
+- Use bond mode **active-backup**. The NICs land on a Proxmox bridge, which has no LACP partner, so 802.3ad will not negotiate.
+- In the installer the NICs show up by Linux name (`enp6s18`, `enp6s19`, ...) in PCI order, which matches net0..net3. Check the MAC if unsure: net1's MAC is the one that starts `02:B0`.
