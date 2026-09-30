@@ -30,6 +30,26 @@ Same range, node-1:
 ssh vertex-tue-am-n1
 ```
 
+## Upload with the palette CLI (from the bastion)
+
+The bastion has the `palette` CLI and, for the party, the bundle already sits in the `pubsec` home directory. Run the upload there, against the node's **overlay IP from your party file** (the `10.240.x.10` address you set in the TUI), not the address of any other machine:
+
+```
+cd ~
+palette content upload --file <bundle>.tar.zst --token <token> --tls=false 10.240.<N>.10
+```
+
+- **Token**: open the node's Local UI (`https://10.240.<N>.10:5080` through the overlay UI page), go to the content upload dialog and copy the token shown there. It is per node: a token from node 2 gets `401 Unauthorized` on node 1.
+- **Watch the end of the token.** A terminal that wraps the line can show a `$` after it. That `$` is not part of the token and gives a `401 Unauthorized`.
+- `connection timed out` on port 5082 means the address is wrong or you are running from your laptop. Only the bastion reaches the nodes on 5082.
+- The upload is chunked and resumable: if it stops, run the same command again and it continues where it left off.
+- To keep it running after you close the terminal:
+
+```
+nohup palette content upload --file <bundle>.tar.zst --token <token> --tls=false 10.240.<N>.10 > ~/upload.log 2>&1 &
+tail -f ~/upload.log
+```
+
 ## Artifact Studio
 
 <https://artifact-studio.spectrocloud.com/>
